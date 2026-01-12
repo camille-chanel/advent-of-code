@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ccc/github/camille-chanel/advent-of-code/day01/part_one'
+relocations:     []
+...
