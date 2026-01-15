@@ -5,7 +5,7 @@
 
 from pathlib import Path
 
-file_path = Path(__file__).parent / "input.txt"
+file_path = Path(__file__).parent / "input" / "input1-4.txt"
 position = 50
 times_passed_zero = 0
 
@@ -16,9 +16,11 @@ with open(file_path, "r") as file:
             times_passed_zero += (position + rotation_num) // 100 
             position = (position + rotation_num) % 100
         else:                  
-            times_passed_zero += (((position - rotation_num) // 100) * -1) - 1
+            times_passed_zero += (((position - rotation_num) // 100) * -1) 
             position = (position - rotation_num) % 100
-            #if position == 0:
-                #times_passed_zero += 1
+            #if rotation_num > 100:
+            #    times_passed_zero += 1
+        # if position == rotation_num:
+        #    times_passed_zero += 1
 
 print(times_passed_zero)
